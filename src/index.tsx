@@ -1,15 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
+import "./styles/tailwind.css";
 import reportWebVitals from './reportWebVitals';
+import "rc-drawer/assets/index.css";
+import { BrowserRouter as Router } from 'react-router-dom';
+import ShopMagned from './context/uiContext';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <ShopMagned>
+      <Router>
+        <App />
+      </Router>
+    </ShopMagned>
   </React.StrictMode>
 );
 
